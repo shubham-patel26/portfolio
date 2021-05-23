@@ -8,10 +8,12 @@ const useStyle = makeStyles({
         height:"60px",
         backgroundColor:"white",
         color: "black",
-        allignItems: "center"
+        allignItems: "center",
+        borderBottom: "0px"
         
     },
     appBarItems:{
+        'font-size':"1.5rem",
         fontWeight: "500",
 
     }

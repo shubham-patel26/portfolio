@@ -9,22 +9,12 @@ import StarIcon from '@material-ui/icons/Star';
 import { Icon } from '@material-ui/core';
 
 const useStyles = makeStyles({
-  root: {
-    minWidth: 275,
-    
-  },
-  bullet: {
-    display: 'inline-block',
-    margin: '0 2px',
-    transform: 'scale(0.8)',
-    
-  },
-  title: {
-    fontSize: 14,
-  },
-  pos: {
-    marginBottom: 12,
-  },
+  card__repo:{
+    height:"150px",
+    '&:hover': {
+      backgroundColor:'rgb(255, 240, 235)',
+    }
+  }
 });
 
 export default function SimpleCard({repo}) {
@@ -33,7 +23,7 @@ export default function SimpleCard({repo}) {
 
   return (
     <a href={repo.repo_url} style={{textDecoration:'none',}}>
-    <Card className={classes.root} >
+    <Card className={classes.card__repo} >
         <CardContent >
           <Typography variant="h5" component="h2" >
             {repo.name}

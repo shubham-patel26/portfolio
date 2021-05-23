@@ -9,17 +9,20 @@ import { CssBaseline, Grid } from '@material-ui/core';
 
 function App() {
   return (
+    <>
+    <Header/>
     <div  className="app">
       
-        <Header/>
-
+        
         <Intro />
         <Projects />
-
         <Footer/>
 
       <CssBaseline/>
     </div>
+    </>
+
+    
 
   );
 }
