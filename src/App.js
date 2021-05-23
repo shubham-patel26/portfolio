@@ -4,23 +4,24 @@ import Header from './Components/Header/Header';
 import Footer from './Components/Footer';
 import Intro from './Components/Intro';
 import Projects from './Components/Project/Projects';
+import Contact from './Components/Contact/Contact';
 import { CssBaseline, Grid } from '@material-ui/core';
 
 
 function App() {
   return (
-    <>
+    <div >
     <Header/>
     <div  className="app">
-      
-        
         <Intro />
         <Projects />
-        <Footer/>
-
+        <Contact />
+       
       <CssBaseline/>
     </div>
-    </>
+    <Footer/>
+    
+    </div>
 
     
 

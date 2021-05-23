@@ -14,7 +14,7 @@ function ShowProject({ repos }) {
     return (
         repos.map(repo => {
             return (
-                <Grid item sm={12} md={4} className={classes.ShowProject__repoCard}>
+                <Grid item xs={12} sm={6} md={4} className={classes.ShowProject__repoCard}>
                     <SimpleCard repo={repo} />
                 </Grid>
             )

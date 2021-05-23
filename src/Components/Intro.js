@@ -1,8 +1,6 @@
 import { Grid,Button,IconButton, Avatar,makeStyles } from '@material-ui/core'
 import React from 'react'
-import GitHubIcon from '@material-ui/icons/GitHub';
-import TwitterIcon from '@material-ui/icons/Twitter';
-import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import Logo from './Logo';
 
 const useStyles = makeStyles({
     intro__hello:{
@@ -24,7 +22,7 @@ const useStyles = makeStyles({
         'font-size': '12px',
     },
     intro__image:{
-        marginLeft:"30px",
+        marginLeft:"5%",
         marginTop:"20px",
     },
     intro__button:{
@@ -40,7 +38,7 @@ const useStyles = makeStyles({
 function Intro() {
     const classes = useStyles();
     return (
-        <Grid container style={{Color:'black', margin:'100px 10px 0 0',}}>
+        <Grid container style={{Color:'black', margin:'80px 0 0 0',}}>
             <Grid item sm={12} md={6}>
             
             <div className={classes.intro__hello}>
@@ -63,27 +61,13 @@ function Intro() {
             
             </div>
             <div className={classes.intro__links}>
-                <IconButton  >
-                    <GitHubIcon />
-                </IconButton>
-
-                <IconButton  >
-                    <TwitterIcon />
-                </IconButton>
-
-                <IconButton  >
-                    <LinkedInIcon />
-                </IconButton>
-            
-                <IconButton>
-                    <Avatar alt="Remy Sharp" src="https://img-premium.flaticon.com/png/512/61/61109.png?token=exp=1621712118~hmac=95872ee2c98e2732b945382582bd6ea8" />
-                </IconButton>
+                <Logo/>
             </div>
 
             </Grid>
-            <Grid item sm={12} md={6} style={{justifyContent:'center'}}>
+            <Grid item sm={12} md={6} >
                 <div className={classes.intro__image}>
-                    <img style={{height:"360px" , width:"360px",objectFit:"fill"}} src="https://aakankshaq-profile.netlify.app/static/Header-32914015ef625514897dfc9540b13aed.png" alt=' ' />
+                    <img style={{height:"65%" , width:"65%",objectFit:"fill"}} src="https://aakankshaq-profile.netlify.app/static/Header-32914015ef625514897dfc9540b13aed.png" alt=' ' />
                 </div>
                 
             </Grid>
