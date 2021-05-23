@@ -21,15 +21,16 @@ const Header = () => {
     const theme = useTheme();
     const isMatched = useMediaQuery(theme.breakpoints.down('sm'));
     return (
-        <AppBar position="absolute" className={classes.appBar}>
-            <Toolbar>
-                <div className={classes.appBarItems}><h5>Shubham Kumar</h5></div>
-                {isMatched? <Sidebar />: <Navbar />}
-                
-                
-            </Toolbar>
+        <>
+            <AppBar position="static" className={classes.appBar}>
+                <Toolbar>
+                    <div className={classes.appBarItems}><h5>Shubham Kumar</h5></div>
+                    {isMatched? <Sidebar />: <Navbar />}
+                </Toolbar>
 
-        </AppBar>
+            </AppBar>
+        </>
+        
     )
 }
 
