@@ -41,7 +41,7 @@ function ContactForm() {
     }
     return (
         <>
-        <Box clone order={{sm:2, md: 1}}>
+        <Box clone order={{xs:2,sm:2,md:2,lg:1}}>
             <Grid item sm={12} md={7} style={{marginBottom:"20px",paddingBottom:"10px"}}>
                 <form  >
                     <div className={classes.form}>

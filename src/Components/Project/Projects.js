@@ -28,7 +28,7 @@ function Projects() {
     }, [])
     console.log(repos);
     return (
-        <div style={{marginTop:"70px"}}>
+        <div style={{marginTop:"70px"}} id="project">
             <h1>Projects</h1>
         <Grid container>
             

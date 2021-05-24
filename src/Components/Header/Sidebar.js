@@ -41,7 +41,11 @@ export default function SwipeableTemporaryDrawer() {
       <List className={classes.list}>
         
           
-        {['Projects', 'Contact',<Brightness2OutlinedIcon/>].map((text, index) => (
+        {[['Projects','project'], ['Contact','contact'],<Brightness2OutlinedIcon/>].map((text, index) => (
+          index!=2 ? <a href={`#${text[1]}`} style={{color:'black'}}> <ListItem button key={text} style={{textAlign:"center"}}>
+                      <ListItemText primary={text[0]} />
+                    </ListItem>
+                    </a>:
           <ListItem button key={text} style={{textAlign:"center"}}>
             <ListItemText primary={text} />
           </ListItem>

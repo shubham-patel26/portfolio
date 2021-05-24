@@ -6,6 +6,10 @@ import Brightness2OutlinedIcon from '@material-ui/icons/Brightness2Outlined';
 const useStyles = makeStyles({
     navItems:{
         marginLeft: "auto",
+        "& a":{
+            color: "black"
+
+        }
     }
 })
 
@@ -14,8 +18,8 @@ function Navbar() {
     return (
         <>
             <span className={classes.navItems}>
-                <Button color="inherit">Projects</Button>
-                <Button color="inherit">Contact</Button>
+                <a href="#project"><Button color="inherit">Projects</Button></a>
+                <a href="#contact"> <Button color="inherit">Contact</Button> </a> 
                 <IconButton aria-label="menu">
                 <Brightness2OutlinedIcon />
                 </IconButton>

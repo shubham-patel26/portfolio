@@ -48,9 +48,9 @@ function Intro() {
              
             <div className={classes.intro__button}>
                 <div style={{padding:"0 10px 0 0"}}>
-                <Button  size="large" variant="contained" color="primary">
+                <a href="#contact"><Button  size="large" variant="contained" color="primary">
                     Hire me
-                </Button>
+                </Button></a>
                 </div>
                 <div style={{padding:"0 0 0 10px"}}>
                     <Button size="large" variant="contained" color="primary">

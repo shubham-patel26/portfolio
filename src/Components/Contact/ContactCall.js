@@ -4,7 +4,7 @@ import { Grid,Box } from '@material-ui/core';
 function ContactCall() {
     return (
         <>
-        <Box clone order={{sm:1, md:2}}>
+        <Box clone order={{xs:1,sm:1,md: 1,lg:2}}>
             <Grid item sm={12} md={5}  style={{textAlign:"center",alignItems:"flex-start",marginBottom:"20px",marginTop:'20px'}} >
                 <div >
                 <a href="tel:8873050525">

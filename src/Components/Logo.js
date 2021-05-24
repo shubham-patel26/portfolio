@@ -4,7 +4,7 @@ import {Tooltip, IconButton, Avatar} from '@material-ui/core';
 
 function Logo() {
     return (
-        <>
+        <div >
         <Tooltip title="Twitter" aria-label="twitter">
             <IconButton>
                 <Avatar alt="twitter" src="https://p.kindpng.com/picc/s/391-3910359_transparent-white-png-social-media-icons-twitter-icon.png" />
@@ -33,7 +33,7 @@ function Logo() {
                 <Avatar alt="Codeforces" src="https://news.itmo.ru/images/news/big/917925.jpg" />
             </IconButton>
         </Tooltip>
-        </>
+        </div>
     )
 }
 

@@ -12,12 +12,13 @@ function Contact() {
     
     const classes = useStyle();
     return (
-        <div className={classes.contact}>
+        <div className={classes.contact} id="contact">
             <h1>Contact</h1>
 
             <Grid container style={{marginTop:"1%"}}>
                <ContactForm />
                <ContactCall />
+               
             </Grid>
             
         </div>

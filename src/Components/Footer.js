@@ -1,6 +1,8 @@
 import { Grid, makeStyles,IconButton, Avatar,useTheme, useMediaQuery,Tooltip } from '@material-ui/core';
 import React from 'react';
 import Logo from './Logo';
+import CallIcon from '@material-ui/icons/Call';
+import MailIcon from '@material-ui/icons/Mail';
 
 const useStyle = makeStyles({
     footer:{
@@ -21,19 +23,29 @@ function Footer() {
     console.log(isMatched)
     return (
         <div className={classes.footer}>
-            <Grid container style={isMatched?{textAlign:"center"}:{paddingLeft:"7rem",justifyContent:"flex-end"}}>
+            <Grid container style={isMatched?{textAlign:"center"}:{paddingLeft:"7rem",}}>
                 <Grid item md={6} xs={12} >
                     <h1>Shubham Kumar</h1>
                     <p>© All rights reserved to me</p>
                     <address>
-                        Written by <a href="mailto:webmaster@example.com">Jon Doe</a>
-                        Bokaro
+                        <div>
+                        Developed by <a href="mailto:shubham763116@gmail.com">Shubham</a><br />
+                        Bokaro Steel City <br/>
+                        Jharkhand (827009)
+                        </div>
+                        
                     </address>
                 </Grid>
 
-                <Grid item md={6} xs={12} style={{}} >
+                <Grid item md={6} xs={12} style={{textAlign:"center",}} >
 
-                <Logo />
+                
+                    <a href="tel:8873050525"> 
+                    <IconButton style={{backgroundColor:'white',marginRight:"5px",color:"black"}}> <CallIcon /> </IconButton>
+                    </a>
+                
+                    <a href="mailto:shubham763116@gmail.com" ><IconButton style={{backgroundColor:'white',marginLeft:'5px',color:"black"}}> <MailIcon />  </IconButton></a>
+               
                 </Grid>
 
             </Grid>
