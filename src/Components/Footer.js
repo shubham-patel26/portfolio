@@ -21,13 +21,17 @@ function Footer() {
     console.log(isMatched)
     return (
         <div className={classes.footer}>
-            <Grid container style={isMatched?{textAlign:"center"}:{paddingLeft:"7rem",}}>
+            <Grid container style={isMatched?{textAlign:"center"}:{paddingLeft:"7rem",justifyContent:"flex-end"}}>
                 <Grid item md={6} xs={12} >
                     <h1>Shubham Kumar</h1>
                     <p>© All rights reserved to me</p>
+                    <address>
+                        Written by <a href="mailto:webmaster@example.com">Jon Doe</a>
+                        Bokaro
+                    </address>
                 </Grid>
 
-                <Grid item md={6} xs={12} >
+                <Grid item md={6} xs={12} style={{}} >
 
                 <Logo />
                 </Grid>

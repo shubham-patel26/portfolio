@@ -1,23 +1,25 @@
 import React,{ useState } from 'react'
+import { Grid, makeStyles,TextField } from '@material-ui/core';
+import ContactForm from './ContactForm';
+import ContactCall from './ContactCall';
 
-function Contact() {
-    const [name, setName] = useState('');
-    const [message, setMessage] = useState('');
-    const [email, setEmail] = useState('');
-
-    const handleSubmit = (event) =>{
-        event.preventDefault();
+const useStyle = makeStyles({
+    contact:{
+        marginTop:"7%"
     }
+})
+function Contact() {
+    
+    const classes = useStyle();
     return (
-        <div>
+        <div className={classes.contact}>
             <h1>Contact</h1>
-            <form onSubmit={handleSubmit}>
-            <label>
-                Essay:
-                <textarea value={message} onChange={(e)=> setMessage(e.target.value)} />
-            </label>
-            <input type="submit" value="Submit" />
-            </form>
+
+            <Grid container style={{marginTop:"1%"}}>
+               <ContactForm />
+               <ContactCall />
+            </Grid>
+            
         </div>
     )
 }

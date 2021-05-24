@@ -4,6 +4,7 @@ import {Grid, makeStyles} from '@material-ui/core';
 
 const useStyles = makeStyles({
     ShowProject__repoCard:{
+        paddingLeft:"5px",
         paddingRight:"15px",
         paddingTop:"15px",
        
