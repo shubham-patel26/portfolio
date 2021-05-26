@@ -5,7 +5,7 @@ import ContactCall from './ContactCall';
 
 const useStyle = makeStyles({
     contact:{
-        marginTop:"7%"
+        marginTop:"7%",
     }
 })
 function Contact() {

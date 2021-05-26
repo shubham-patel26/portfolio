@@ -10,6 +10,7 @@ const useStyle = makeStyles({
         height:"auto",
         backgroundColor:"rgb(227, 225, 213)",
         padding:"4rem 0rem 2rem",
+        marginTop:"10%",
         color:"rgb(0, 0, 0)",
         
         
@@ -20,7 +21,7 @@ function Footer() {
     const classes = useStyle();
     const theme= useTheme();
     const isMatched = useMediaQuery(theme.breakpoints.down('sm'));
-    console.log(isMatched)
+    // console.log(isMatched)
     return (
         <div className={classes.footer}>
             <Grid container style={isMatched?{textAlign:"center"}:{paddingLeft:"7rem",}}>
