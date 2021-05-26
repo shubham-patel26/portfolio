@@ -32,11 +32,18 @@ export default function SimpleCard({repo}) {
           <Typography variant="body2" component="p">
             {repo.description}
           </Typography>
-
-          <span>
-            {repo.stars}
-          <Icon><StarIcon/> </Icon> 
-          </span>
+          <div style={{display:'flex',}}>
+            <div>
+              <span style={{fontSize:'1rem'}}>
+              {repo.stars}
+            </span>
+            </div>
+            <div >
+            <Icon style={{fontSize:'20px'}}><StarIcon/> </Icon> 
+            </div>
+          
+          </div>
+          
           
 
         </CardContent>

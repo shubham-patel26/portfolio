@@ -1,6 +1,6 @@
 import { Box, Grid, makeStyles, TextField,Button } from '@material-ui/core'
 import React, { useEffect, useState } from 'react'
-
+import axios from 'axios';
 const initialState = {
     fullName: '',
     email: '',
@@ -34,7 +34,6 @@ function ContactForm() {
         if( touched.fullName && (values.fullName.trimStart()=='') ){
             newError.fullName = "name is required" 
         } else if(touched.fullName && !(values.fullName.trimStart()=='')){
-            console.log('else name');
             newError.fullName = '';
         }
         
@@ -92,22 +91,31 @@ function ContactForm() {
     };
 
 
-    const handleSubmit = e => {
+    const handleSubmit = async (e)  => {
         e.preventDefault();
         alert(values);
+
+        const data = values;
+        const resp = await axios.post('http://localhost:3443/sendmail',data);
+
+        alert(resp);
+
+        setValues(initialState);
+        setErrMessage(initialState);
+        setError(false);
+        setTouched({fullName: false , email:false, message:false});
         
     }
     useEffect(()=>{
         const response=validate();
         setError(response);
     },[values, touched])
-    
-    // console.log(errMessage);
+
     return (
         <>
         <Box clone order={{xs:2,sm:2,md:2,lg:1}}>
             <Grid item sm={12} md={7} style={{marginBottom:"20px",paddingBottom:"10px"}}>
-                <form  >
+                <form  onSubmit={handleSubmit} >
                     <div className={classes.form}>
                     <div className={classes.formLabel}>
                     <TextField
