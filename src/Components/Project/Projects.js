@@ -2,11 +2,12 @@ import React,{useEffect, useState} from 'react'
 import axios from 'axios';
 import ShowProject from './ShowProject';
 import { Grid } from '@material-ui/core';
+import { myData } from '../../data';
 function Projects() {
     const [ repos, setRepos ] = useState([]);
 
     useEffect( async () => {
-        const { data } = await axios.get('https://api.github.com/users/shubham-patel26/repos');
+        const { data } = await axios.get(myData.github_api);
         // console.log(data);
         const newData = data.map( repo => {
                 const obj = { 

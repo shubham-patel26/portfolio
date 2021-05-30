@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { AppBar, makeStyles, useTheme, Toolbar, useMediaQuery } from '@material-ui/core';
 import Navbar from './Navbar';
 import Sidebar from './Sidebar.js'
+import { myData } from '../../data';
 
 const useStyle = makeStyles({
     appBar:{
@@ -26,7 +27,7 @@ const Header = () => {
         <>
             <AppBar position="static" className={classes.appBar}>
                 <Toolbar>
-                    <div className={classes.appBarItems}><h5>Shubham Kumar</h5></div>
+                    <div className={classes.appBarItems}><h5>{myData.fullUsername}</h5></div>
                     {isMatched? <Sidebar />: <Navbar />}
                 </Toolbar>
 

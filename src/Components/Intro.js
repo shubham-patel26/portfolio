@@ -1,6 +1,7 @@
 import { Grid,Button,IconButton, Avatar,makeStyles } from '@material-ui/core'
 import React from 'react'
 import Logo from './Logo';
+import { myData } from '../data';
 
 const useStyles = makeStyles({
     intro__hello:{
@@ -43,7 +44,7 @@ function Intro() {
             
             <div className={classes.intro__hello}>
             <h3> <span> Hello </span> 👋</h3>  
-            <p> I'm Shubham and I am a 3rd year CSE student at NIT Jamshedpur! </p> 
+            <p> I'm {myData.username} and I am a 3rd year CSE student at NIT Jamshedpur! </p> 
             </div>
              
             <div className={classes.intro__button}>
@@ -53,9 +54,12 @@ function Intro() {
                 </Button></a>
                 </div>
                 <div style={{padding:"0 0 0 10px"}}>
-                    <Button size="large" variant="contained" color="primary">
-                    View CV
-                    </Button>
+                    <a href={myData.resume_link} >
+                        <Button size="large" variant="contained" color="primary">
+                        View CV
+                        </Button>
+                    </a>
+                    
                 </div>
             
             
@@ -67,7 +71,7 @@ function Intro() {
             </Grid>
             <Grid item sm={12} md={6} >
                 <div className={classes.intro__image}>
-                    <img style={{height:"65%" , width:"65%",objectFit:"fill"}} src="https://aakankshaq-profile.netlify.app/static/Header-32914015ef625514897dfc9540b13aed.png" alt=' ' />
+                    <img style={{height:"65%" , width:"65%",objectFit:"fill"}} src={myData.myPhoto_url} alt=' ' />
                 </div>
                 
             </Grid>

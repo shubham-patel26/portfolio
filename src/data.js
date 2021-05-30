@@ -1,0 +1,15 @@
+export const myData ={
+    fullUsername:'Shubham Kumar',
+    username:'Shubham',
+    myPhoto_url:'https://aakankshaq-profile.netlify.app/static/Header-32914015ef625514897dfc9540b13aed.png',
+    phone_No:'8873050525',
+    email_id:'shubham763116@gmail.com',
+    github_link:'https://github.com/shubham-patel26',
+    linkedin_link:'https://www.linkedin.com/in/shubham-kumar-7792641a9/',
+    twitter_link:'https://twitter.com/Shubham34830835',
+    hackerearth_link:'https://www.hackerearth.com/@ShubhamPatel26',
+    codeforces_link:'https://codeforces.com/profile/shubham763116',
+    resume_link:'https://drive.google.com/file/d/1yjIwMuDw0d-GnJ2-FSgOhnVP9ulHAVoZ/view?usp=sharing',
+    github_api:'https://api.github.com/users/shubham-patel26/repos',
+    deployedApp_url:'https://portfolio-backend26.herokuapp.com/',
+}

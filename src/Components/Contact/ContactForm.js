@@ -1,6 +1,8 @@
 import { Box, Grid, makeStyles, TextField,Button } from '@material-ui/core'
 import React, { useEffect, useState } from 'react'
 import axios from 'axios';
+import { myData } from '../../data';
+
 const initialState = {
     fullName: '',
     email: '',
@@ -96,7 +98,7 @@ function ContactForm() {
         alert(values);
 
         const data = values;
-        const resp = await axios.post('https://portfolio-backend26.herokuapp.com/sendmail',data);
+        const resp = await axios.post(`${myData.deployedApp_url}sendmail`,data);
 
         alert(resp);
 
