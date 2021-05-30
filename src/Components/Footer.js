@@ -30,7 +30,7 @@ function Footer() {
                     <p>© All rights reserved to me</p>
                     <address>
                         <div>
-                        Developed by <a href="mailto:shubham763116@gmail.com">{myData.username}</a><br />
+                        Developed by <a href={`mailto:${myData.email_id}`}>{myData.username}</a><br />
                         Bokaro Steel City <br/>
                         Jharkhand (827009)
                         </div>
