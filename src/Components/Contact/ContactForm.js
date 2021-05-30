@@ -96,7 +96,7 @@ function ContactForm() {
         alert(values);
 
         const data = values;
-        const resp = await axios.post('http://localhost:3443/sendmail',data);
+        const resp = await axios.post('https://portfolio-backend26.herokuapp.com/sendmail',data);
 
         alert(resp);
 

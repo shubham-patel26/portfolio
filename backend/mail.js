@@ -1,41 +1,30 @@
-const nodemailer = require("nodemailer");
+
+const nodemailer = require('nodemailer');
 require('dotenv').config();
+const transporter = nodemailer.createTransport({
+  service: 'gmail',
+  auth: {
+    user: process.env.MAIL_USERNAME,
+    pass: process.env.MAIL_PASSWORD
+  }
+});
 
-const sendmail =async ( { fullName, email, message}, cb ) => {
-  let testAccount = await nodemailer.createTestAccount();
-  let transporter = nodemailer.createTransport({
-    service: 'gmail',
-    auth: {
-      type: 'OAuth2',
-      user: process.env.MAIL_USERNAME,
-      pass: process.env.MAIL_PASSWORD,
-      clientId: process.env.OAUTH_CLIENTID,
-      clientSecret: process.env.OAUTH_CLIENT_SECRET,
-      refreshToken: process.env.OAUTH_REFRESH_TOKEN
-    },
-    tls:{
-        rejectUnauthorized:false
-    }
-  });
-
-  // send mail with defined transport object
-   try{
-        const info = await transporter.sendMail({
-        from: `${email} <${process.env.MAIL_USERNAME}>`, // sender address
-        to: "shubham763116@gmail.com", // list of receivers
+const sendEmail = ( { fullName, email, message}, cb) =>{
+  
+  const mailOptions = {
+        from: `${email} <process.env.MAIL_USERNAME>`, // sender address
+        to: process.env.RECEIVER_MAIL, // list of receivers
         subject: "Hiring", // Subject line
         text: ` name: ${fullName} 
-         message: ${message}`, // plain text body
-      })
-      console.log("Message sent: %s", info.messageId);
-      cb(info);
-   }
-   catch(err){
-       console.log(err);
-   }
-  
+               message: ${message}`, // plain text body
+      }
 
-  
+    transporter.sendMail(mailOptions, (error , info) => {
+      if(error){
+        console.log(error);
+      }else {
+        cb(info);
+      }
+    })
 }
-
-module.exports = sendmail;
+module.exports = sendEmail;
