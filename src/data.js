@@ -9,7 +9,7 @@ export const myData ={
     twitter_link:'https://twitter.com/Shubham34830835',
     hackerearth_link:'https://www.hackerearth.com/@ShubhamPatel26',
     codeforces_link:'https://codeforces.com/profile/shubham763116',
-    resume_link:'https://drive.google.com/file/d/1yjIwMuDw0d-GnJ2-FSgOhnVP9ulHAVoZ/view?usp=sharing',
+    resume_link:'https://drive.google.com/file/d/11ORVnpIgWZ0OmtJK_zk4m7rurzoTuEJW/view?usp=sharing',
     github_api:'https://api.github.com/users/shubham-patel26/repos',
     deployedApp_url:'https://portfolio-backend26.herokuapp.com/',
 }
